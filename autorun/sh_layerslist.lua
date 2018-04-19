@@ -5,7 +5,8 @@ local meta = FindMetaTable("Entity")
 ------------------------------------------------------------------------------------------------------------------]]--
 
 function meta:GetLayer()
-	local val = self:GetDTInt( 3 )
+	if !IsValid(self) then return end
+	local val = self:GetDTInt( 3 ) or 1
 	
 	if CLIENT then
 		if ( val == 0 and self != LocalPlayer() ) then val = LocalPlayer():GetLayer() end
@@ -15,7 +16,8 @@ function meta:GetLayer()
 end
 
 function meta:GetViewLayer()
-	local val = self:GetDTInt( 2 )
+	if !IsValid(self) then return end
+	local val = self:GetDTInt( 2 ) or 1
 	
 	if CLIENT then 
 		if ( val == 0 ) then val = LocalPlayer():GetLayer() end
