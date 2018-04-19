@@ -10,3 +10,6 @@ Make sure you put this in its own addon folder, if not make an issue request wit
 
 # stuff
 I'm not responsible for any exploits this may have, I didn't test any of it I just fixed it :)
+
+# pull requests
+if you do a pull request, atleast tab your code correctly thanks
